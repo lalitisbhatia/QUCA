@@ -1,0 +1,28 @@
+extends layoutAdmin
+block content
+  .container
+    .row
+      .col-md-3.col-sm-3
+        .tabs-left
+          ul.nav.nav-tabs
+            li.active
+              a(ui-sref='home', data-toggle='tab')
+                span.glyphicon.glyphicon-heart Home
+            li
+              a(ui-sref='users', data-toggle='tab')
+                span.glyphicon.glyphicon-star Users
+            li
+              a(href='announcements', data-toggle='tab')
+                span.glyphicon.glyphicon-headphones Announcements
+            li
+              a(href='schedule', data-toggle='tab')
+                span.glyphicon.glyphicon-calendar Schedule
+            li
+              a(href='f', data-toggle='tab')
+                span.glyphicon.glyphicon-cog
+      .col-md-9.col-sm-9
+        h2 Heading
+        p
+          | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+        div(ui-view="")
+

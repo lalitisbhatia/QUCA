@@ -1,0 +1,88 @@
+extends layoutVis
+block content
+  .container-fluid
+    section#mcg.row.title-row
+      .fill-screen.stellar-bg(data-stellar-background-ratio='0.2', style='background-image: url("./images/SCG_main.jpg")')
+        img.img-responsive.title-image(src='./images/preview1.png')
+        .down-button
+          a.btn(href='#mcgVis')
+            i.fa.fa-arrow-circle-down.fa-4x
+    section#mcgVis.row.text-banner
+      h1 Welcome to QUCA
+        h3 Queens United Cricket Academy
+      p
+        | QUCA is the the first cricket academy dedicated to developing a passion for the game among the youth of New York reqion. Housed at Idlewild park, one of the few grounds dedicated to cricket in the New York region, QUCA is a non-profit organisation started by people passionate about the game
+    section.row
+      #carousel.carousel.slide(data-ride='carousel')
+        // Indicators
+        ol.carousel-indicators
+          li.active(data-target='#carousel', data-slide-to='0')
+          li(data-target='#carousel', data-slide-to='1')
+          li(data-target='#carousel', data-slide-to='2')
+        // Wrapper for slides
+        .carousel-inner(role='listbox')
+          .item.active
+            .carousel-caption
+              h3 CA Grounds
+              p list of grounds in australia
+            img(src='./img/MCG_main.jpg', alt='Scale Mountain')
+          .item
+            .carousel-caption
+              h3 Sydney Cricket ground
+              p Home of Bradman and Trumper
+            img(src='./img/SCG_main.jpg', alt='Mountain')
+          .item
+            .carousel-caption
+              h3 The WACA
+              p Home of pace and bounce
+            img(src='./img/WACA_main.jpg', alt='Rockies')
+          .item
+            .carousel-caption
+              h3 Adelaide Oval
+              p South Australia
+            img(src='./img/Adelaide_main.png', alt='Rockies')
+          .item
+            .carousel-caption
+              h3 The GABBA
+              p Home of AB and some tough cookies
+            img(src='./img/GABBA_main.jpg', alt='Rockies')
+        // Controls
+        a.left.carousel-control(href='#carousel', role='button', data-slide='prev')
+          span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+          span.sr-only Previous
+        a.right.carousel-control(href='#carousel', role='button', data-slide='next')
+          span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+          span.sr-only Next
+    section#scg.row
+      .fill-screen.fixed-attachment(style='background-image: url("./img/SCG_main.jpg")')
+    section.activity-section.text-banner.content-filler
+      h1 Visit the SCG
+      p#nswg
+        | Situated in Moore Park in the city's east, the Sydney Cricket Ground is one of the world's most famous cricketing venues. For a stadium in a major centre, it has a relatively limited capacity (a little over 40,000) but this has the direct benefit of ensuring that spectators are close to the action from virtually any point in the ground. Its limited capacity is, in fact, essentially the result of the extension over recent years of seating to most parts of a stadium now devoid of its long famous hill and instead dominated by the Brewongle, Churchill, O'Reilly, Noble and Doug Walters Stands. The green-roofed Ladies pavilion remains, still one of cricket's most famous landmarks.
+      .activity-element.col-md-4.wow.fadeInLeft
+        img(src='./img/SCG_bradman.jpg')
+        h4 Don Bradman
+        p
+      .activity-element.col-md-4.wow.fadeInDown
+        img(src='./img/SCG_trumper.jpg')
+        h4 Victor Trumper
+        p
+      .activity-element.col-md-4.wow.fadeInRight
+        img(src='./img/SCG_benaud.jpg')
+        h4 Richie Benaud
+        p
+    section.row
+      h2 Nano Gallery
+      #nanoGallery3
+        a(href='./img/MCG_big.jpg', data-ngthumb='./img/MCG_big.jpg') MCG
+        a(href='./img/SCG_main.jpg', data-ngthumb='./img/SCG_main.jpg') SCG
+        a(href='./img/WACA_main.jpg', data-ngthumb='./img/WACA_main.jpg') WACA
+        a(href='./img/Adelaide_main.png', data-ngthumb='./img/Adelaide_main.png') Oval
+        a(href='./img/GABBA_main.jpg', data-ngthumb='./img/GABBA_main.jpg') GABBA
+    section#waca.row
+      .fill-screen.fixed-attachment(style='background-image: url("./img/WACA_main.jpg")')
+    section.text-banner.content-filler
+      h1 Welcome to WACA
+      p The home of pace, bounce and the Fremantle Doctor
+  footer.container-fluid
+    h1 Footer
