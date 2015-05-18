@@ -1,3 +1,5 @@
 .loginPanel( ng-controller="signupController" ng-init="init()").loginPanel-responsive.signup-panel
-
     include signupForm
+    .signup-bot
+      a(ui-sref='register.login').btn.btn-link
+        p Back to login

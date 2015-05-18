@@ -25,6 +25,7 @@ app.set('view engine', 'jade');
 
 // ======= database
 var configDB = require('./config/config.js');
+console.log(configDB.db);
 mongoose.connect(configDB.db); // connect to our database
 
 // ======= Passport Authentication

@@ -1,0 +1,55 @@
+block nav
+link(href='./stylesheets/nav.css', rel='stylesheet')
+header.container-fluid
+  nav#dskNav.navbar.navbar-inverse.navbar-fixed-top.cbp-af-header(role='navigation')
+    .container-fluid
+      // Brand and toggle get grouped for better mobile display
+      .navbar-header
+
+        a(href='#')
+          img(src='./images/preview1.png')
+      // Collect the nav links, forms, and other content for toggling
+      #bs-example-navbar-collapse-1.collapse.navbar-collapse
+        ul.nav.navbar-nav.navbar-right
+          li
+            a(data-toggle="collapse" data-target=".navbar-collapse" id="home" ui-sref="home") Home
+          li
+            a(data-toggle="collapse" data-target=".navbar-collapse" href='#about') About Us
+          li
+            a(data-toggle="collapse" data-target=".navbar-collapse" href='#acProg') Programs
+          li
+            a(data-toggle="collapse" data-target=".navbar-collapse" href='#coaches') Coaches
+          li
+            a(data-toggle="collapse" data-target=".navbar-collapse" href='#contact') Contact
+          li
+            a(data-toggle="collapse" data-target=".navbar-collapse" ui-sref='register.login') Join QUCA
+      // /.navbar-collapse
+    // /.container-fluid
+  div#mobNav
+    nav
+      ul.list-unstyled.main-menu
+        li.text-left
+          a#nav-close(href='#')
+            b X
+        li
+          a(data-toggle="collapse" data-target=".navbar-collapse" id="home" ui-sref="home") Home
+        li
+          a(data-toggle="collapse" data-target=".navbar-collapse" href='#about') About Us
+        li
+          a(data-toggle="collapse" data-target=".navbar-collapse" href='#acProg') Programs
+        li
+          a(data-toggle="collapse" data-target=".navbar-collapse" href='#coaches') Coaches
+        li
+          a(data-toggle="collapse" data-target=".navbar-collapse" href='#contact') Contact
+        li
+          a(data-toggle="collapse" data-target=".navbar-collapse" ui-sref='register.login') Join QUCA
+    .navbar.navbar-inverse.navbar-fixed-top
+      // Include your brand here
+      .navbar-header.pull-right
+        a#nav-expander.nav-expander.fixed
+          |   
+          i.fa.fa-bars.fa-lg.white
+      a.navbar-brand(href='#')
+        img(src='./images/preview1.png')
+
+

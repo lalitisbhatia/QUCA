@@ -12,7 +12,7 @@ module.exports = function(app,passport){
   app.get('/',function(req,res){
     if(req.isAuthenticated()){
       console.log('user is authenticated');
-      res.render('indexSubs.jade',{
+      res.render('index.jade',{
         user:req.user // get the user out of session and pass to template
       })
     }else{
@@ -56,7 +56,12 @@ module.exports = function(app,passport){
         //console.log(user);
         if (err) { return next(err); }
         console.log('userid = ',res.cookies);
-        res.send({redirect:'/',auth:true,user:user});
+        if(user.local.isAdmin){
+          res.send({redirect:'/admin',auth:true,user:user});
+        }else{
+          res.send({redirect:'/',auth:true,user:user});
+        }
+
       });
     })(req, res, next);
   });

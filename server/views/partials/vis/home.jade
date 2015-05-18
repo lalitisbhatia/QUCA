@@ -1,0 +1,91 @@
+section.row
+  #carousel.carousel.slide(data-ride='carousel')
+    // Indicators
+    ol.carousel-indicators
+      li.active(data-target='#carousel', data-slide-to='0')
+      li(data-target='#carousel', data-slide-to='1')
+      li(data-target='#carousel', data-slide-to='2')
+    // Wrapper for slides
+    .carousel-inner(role='listbox')
+      .item.active
+        .carousel-caption
+
+        img(src='./images/IMG_0485.jpg', alt='')
+      .item
+        .carousel-caption
+          h3
+          p
+        img(src='./images/IMG_0486.jpg', alt='')
+      .item
+        .carousel-caption
+          h3
+          p
+        img(src='./images/IMG_0490.jpg', alt='')
+    .down-button
+      a.btn(href='#mcgVis')
+        i.fa.fa-arrow-circle-down.fa-4x
+        h3 QUCA
+          p Queens United Cricket Academy
+    // Controls
+    a.left.carousel-control(href='#carousel', role='button', data-slide='prev')
+      span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+      span.sr-only Previous
+    a.right.carousel-control(href='#carousel', role='button', data-slide='next')
+      span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+      span.sr-only Next
+section#mcgVis.row.text-banner
+  h1 Welcome to QUCA
+    h3 Queens United Cricket Academy
+  p
+    | QUCA is the the first cricket academy dedicated to developing a passion for the game among the youth of New York reqion. Housed at Idlewild park, one of the few grounds dedicated to cricket in the New York region, QUCA is a non-profit organisation started by people passionate about the game
+
+.container-fluid
+  section#topImg.row
+
+section#scg.row
+  .fill-screen.fixed-attachment(style='background-image: url("./images/SCG_main.jpg")')
+section.activity-section.text-banner.content-filler
+  h1 Visit the SCG
+  p#nswg
+    | Situated in Moore Park in the city's east, the Sydney Cricket Ground is one of the world's most famous cricketing venues. For a stadium in a major centre, it has a relatively limited capacity (a little over 40,000) but this has the direct benefit of ensuring that spectators are close to the action from virtually any point in the ground. Its limited capacity is, in fact, essentially the result of the extension over recent years of seating to most parts of a stadium now devoid of its long famous hill and instead dominated by the Brewongle, Churchill, O'Reilly, Noble and Doug Walters Stands. The green-roofed Ladies pavilion remains, still one of cricket's most famous landmarks.
+  .activity-element.col-md-4.wow.fadeInLeft
+    img(src='./images/SCG_bradman.jpg')
+    h4 Don Bradman
+    p
+  .activity-element.col-md-4.wow.fadeInDown
+    img(src='./images/SCG_trumper.jpg')
+    h4 Victor Trumper
+    p
+  .activity-element.col-md-4.wow.fadeInRight
+    img(src='./images/SCG_benaud.jpg')
+    h4 Richie Benaud
+    p
+section.row
+  h2 Nano Gallery
+  #nanoGallery3
+    a(href='./images/MCG_big.jpg', data-ngthumb='./images/MCG_big.jpg') MCG
+    a(href='./images/SCG_main.jpg', data-ngthumb='./images/SCG_main.jpg') SCG
+    a(href='./images/WACA_main.jpg', data-ngthumb='./images/WACA_main.jpg') WACA
+    a(href='./images/Adelaide_main.png', data-ngthumb='./images/Adelaide_main.png') Oval
+    a(href='./images/GABBA_main.jpg', data-ngthumb='./images/GABBA_main.jpg') GABBA
+section#waca.row
+  .fill-screen.fixed-attachment(style='background-image: url("./images/WACA_main.jpg")')
+section.text-banner.content-filler
+  h1 Welcome to WACA
+  p The home of pace, bounce and the Fremantle Doctor
+footer.container-fluid
+  h1 Footer
+script.
+  $('nav a,.down-button a').bind('click',function(){
+    console.log("clicked");
+    $('html body').stop().animate({
+      scrollTop: $($(this).attr('href')).offset().top -110
+    },1500,'swing');
+    event.preventDefault();
+  });
+script(type='text/javascript').
+  $(document).ready(function() {
+    $('.carousel').carousel({
+      interval: 2000
+    });
+  });

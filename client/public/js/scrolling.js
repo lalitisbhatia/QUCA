@@ -9,12 +9,13 @@ $(function(){
   });
 
   //smooth scrolling
-  $('nav a,.down-button a').bind('click',function(){
+  $('.down-button a').bind('click',function(){
+    console.log("clicked");
     $('html body').stop().animate({
       scrollTop: $($(this).attr('href')).offset().top -110
     },1500,'easeInOutExpo');
     event.preventDefault();
-  })
+  });
 
   //parallax scrolling with stellar.js
   $(window).stellar();

@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  console.log("nav expander clicked");
   $('#nav-expander').on('click', function (e) {
     e.preventDefault();
     $('body').toggleClass('nav-expanded');

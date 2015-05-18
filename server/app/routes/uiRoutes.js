@@ -42,7 +42,7 @@ module.exports = function(app){
       console.log('ENV = ' + app.get('env'));
       var msg = req.flash('message') ; //.length>0?req.flash('message'):"test message";
       console.log(msg);
-      res.render('index_.jade', { mesg: msg});
+      res.render('index.jade', { mesg: msg});
     }
 
   });
@@ -52,13 +52,13 @@ module.exports = function(app){
   //ADMIN PAGE (with login links ============
   //========================================
   app.get('/admin/',function(req,res){
-    if(req.isAuthenticated() && req.user.local.isAdmin){
+    if(req.isAuthenticated() ){
       console.log('user is admin');
       res.render('admin.jade',{
         user:req.user // get the user out of session and pass to template
         })
     }else{
-      res.render('admin.jade');
+      res.render('adminVis.jade');
     }
 
   });

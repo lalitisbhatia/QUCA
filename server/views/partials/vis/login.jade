@@ -1,3 +1,6 @@
 .loginPanel(ng-controller="loginController" ng-init="init()").loginPanel-responsive
-    include localLogin
-    include signupBot
+
+  include localLogin
+  .signup-bot
+    a(ui-sref='register.signup').btn.btn-link
+      p Create an account
