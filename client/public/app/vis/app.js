@@ -7,6 +7,26 @@ vis.config(['$stateProvider', function($stateProvide) {
       templateUrl: "../partials/vis/home"
 
     })
+    .state('about', {
+      url: "/about",
+      templateUrl: "../partials/vis/about"
+
+    })
+    .state('coaches', {
+      url: "/coaches",
+      templateUrl: "../partials/vis/coaches"
+
+    })
+    .state('contact', {
+      url: "/contact",
+      templateUrl: "../partials/vis/contact"
+
+    })
+    .state('programs', {
+      url: "/programs",
+      templateUrl: "../partials/vis/programs"
+
+    })
     .state('register', {
       url: '/register',
       abstract: true,

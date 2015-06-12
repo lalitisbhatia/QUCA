@@ -340,3 +340,8 @@ article p{
     font-weight: bold;
     border: none;
 }
+
+#about,#coaches,#contact,#programs{
+    margin-top: 35px;
+    height: 700px;
+}

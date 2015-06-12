@@ -10,7 +10,7 @@ $(function(){
 
   //smooth scrolling
   $('.down-button a').bind('click',function(){
-    console.log("clicked");
+    //console.log("clicked");
     $('html body').stop().animate({
       scrollTop: $($(this).attr('href')).offset().top -110
     },1500,'easeInOutExpo');

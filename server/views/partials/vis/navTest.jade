@@ -7,20 +7,20 @@ header.container-fluid
       .navbar-header
 
         a(href='#')
-          img(src='./images/preview1.png')
+          img(src='./images/QUCA_Logo.png')
       // Collect the nav links, forms, and other content for toggling
       #bs-example-navbar-collapse-1.collapse.navbar-collapse
         ul.nav.navbar-nav.navbar-right
           li
             a(data-toggle="collapse" data-target=".navbar-collapse" id="home" ui-sref="home") Home
           li
-            a(data-toggle="collapse" data-target=".navbar-collapse" href='#about') About Us
+            a(data-toggle="collapse" data-target=".navbar-collapse" ui-sref='about') About Us
           li
-            a(data-toggle="collapse" data-target=".navbar-collapse" href='#acProg') Programs
+            a(data-toggle="collapse" data-target=".navbar-collapse" ui-sref='programs') Programs
           li
-            a(data-toggle="collapse" data-target=".navbar-collapse" href='#coaches') Coaches
+            a(data-toggle="collapse" data-target=".navbar-collapse" ui-sref='coaches') Coaches
           li
-            a(data-toggle="collapse" data-target=".navbar-collapse" href='#contact') Contact
+            a(data-toggle="collapse" data-target=".navbar-collapse" ui-sref='contact') Contact
           li
             a(data-toggle="collapse" data-target=".navbar-collapse" ui-sref='register.login') Join QUCA
       // /.navbar-collapse
@@ -32,17 +32,17 @@ header.container-fluid
           a#nav-close(href='#')
             b X
         li
-          a(data-toggle="collapse" data-target=".navbar-collapse" id="home" ui-sref="home") Home
+          a(class="navLink" data-toggle="collapse" data-target=".navbar-collapse" id="home" ui-sref="home") Home
         li
-          a(data-toggle="collapse" data-target=".navbar-collapse" href='#about') About Us
+          a(class="navLink" data-toggle="collapse" data-target=".navbar-collapse" ui-sref='about') About Us
         li
-          a(data-toggle="collapse" data-target=".navbar-collapse" href='#acProg') Programs
+          a(class="navLink" data-toggle="collapse" data-target=".navbar-collapse" ui-sref='programs') Programs
         li
-          a(data-toggle="collapse" data-target=".navbar-collapse" href='#coaches') Coaches
+          a(class="navLink" data-toggle="collapse" data-target=".navbar-collapse" ui-sref='coaches') Coaches
         li
-          a(data-toggle="collapse" data-target=".navbar-collapse" href='#contact') Contact
+          a(class="navLink" data-toggle="collapse" data-target=".navbar-collapse" ui-sref='contact') Contact
         li
-          a(data-toggle="collapse" data-target=".navbar-collapse" ui-sref='register.login') Join QUCA
+          a(class="navLink" data-toggle="collapse" data-target=".navbar-collapse" ui-sref='register.login') Join QUCA
     .navbar.navbar-inverse.navbar-fixed-top
       // Include your brand here
       .navbar-header.pull-right
@@ -50,6 +50,6 @@ header.container-fluid
           |   
           i.fa.fa-bars.fa-lg.white
       a.navbar-brand(href='#')
-        img(src='./images/preview1.png')
+        img(src='./images/logo1.png')
 
 
